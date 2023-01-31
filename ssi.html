@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>My Page with Server-Side Includes</title>
+    <script>
+        function displayInput() {
+            var input = document.getElementById("userInput").value;
+            document.getElementById("display").innerHTML = input;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Header</h1>
+    <!--#include file="navigation.shtml" -->
+    <p>Welcome to my page</p>
+    <!--#include virtual="footer.shtml" -->
+    <input type="text" id="userInput">
+    <button onclick="displayInput()">Display Input</button>
+    <div id="display"></div>
+</body>
+
+</html>
